@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: order-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/order-service
+    password: 123456123
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 9998
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

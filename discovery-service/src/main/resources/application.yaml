@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Eureka Discovery Server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false #As it's a discovery server, we don't want to register with eureka.
+    fetch-registry: false #As it's a discovery server, we don't need a registry of a server.
+server:
+  port: 8761 #Default port
